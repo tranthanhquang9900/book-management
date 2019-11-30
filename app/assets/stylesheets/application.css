@@ -26,3 +26,19 @@ th {
 th {
   border-bottom: 1px solid #ddd;
 }
+
+.bg-primary {
+  background-color: #b3ac9a !important;
+}
+.create {
+  background-color: #b5a493;
+}
+.delete {
+  background-color: #9e2626;
+}
+.details {
+  background-color: #75968f;
+}
+.update {
+  background-color: #949c75;
+}

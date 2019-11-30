@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
+<h1>Books List</h1>
+
+<h5><button type="button" class="create"><%= link_to 'Book Creation', new_book_path %></button></h5>
+
 
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Description</th>
-      <th>Photo</th>
-      <th colspan="4"></th>
+      <%# <th>Description</th>
+      <th>Photo</th> %>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -18,11 +21,9 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
-        <td><%= book.description %></td>
-        <td><%= image_tag book.photo_url, width: '100%' if book.photo.present? %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="details"><%= link_to 'Details', book %></button></td>
+        <td><button type="button" class="update"><%= link_to 'Update', edit_book_path(book) %></button></td>
+        <td><button type="button" class="delete"><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+
