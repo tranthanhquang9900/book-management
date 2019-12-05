@@ -7,20 +7,21 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <%# <th>Description</th>
-      <th>Photo</th> %>
-      <th colspan="2"></th>
+    <tr class="center-text">
+      <th >Title</th>
+      <th >Author</th>
+      <th >Photo</th>
+      <th >Action</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @books.each do |book| %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book.author %></td>
+      <tr class="center-text border-bottom">
+        <td class="border-right"><%= book.title %></td>
+        <td class="border-right"><%= book.author %></td>
+        <td class="border-right"><%= image_tag book.photo_url, width: '85%' if book.photo.present? %></td>
         <td><button type="button" class="details"><%= link_to 'Details', book %></button></td>
         <td><button type="button" class="update"><%= link_to 'Update', edit_book_path(book) %></button></td>
         <td><button type="button" class="delete"><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
