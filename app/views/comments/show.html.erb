@@ -20,5 +20,5 @@
   <%= @comment.book_id %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<button type="button" class="update"><%= link_to 'Edit', edit_comment_path(@comment) %></button> |
+<button type="button" class="back"><%= link_to 'Back', comments_path %></button>

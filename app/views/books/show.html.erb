@@ -27,11 +27,11 @@
       <%= comment.description %>
       <br>
       <p><%= comment.book_id %></p>
-      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p><button type="button" class="delete"><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
     </div>
   <% end %>
   <%= render partial: 'comments/form', locals: { comment: @comment } %>
     </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<button type="button" class="update"><%= link_to 'Edit', edit_book_path(@book) %></button> |
+<button type="button" class="back"><%= link_to 'Back', books_path %></button>

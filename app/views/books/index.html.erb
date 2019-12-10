@@ -22,7 +22,7 @@
         <td class="border-right"><%= book.title %></td>
         <td class="border-right"><%= book.author %></td>
         <td class="border-right"><%= image_tag book.photo_url, width: '85%' if book.photo.present? %></td>
-        <td><button type="button" class="details"><%= link_to 'Details', book %></button></td>
+        <!--<td><button type="button" class="details"><%= link_to 'Details', book %></button></td>-->
         <td><button type="button" class="update"><%= link_to 'Update', edit_book_path(book) %></button></td>
         <td><button type="button" class="delete"><%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
